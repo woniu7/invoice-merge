@@ -1,0 +1,1 @@
+nix-shell -p python39 python312Packages.pymupdf python312Packages.pillow python312Packages.img2pdf
