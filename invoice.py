@@ -6,7 +6,6 @@ from PIL import Image, ImageDraw, ImageFont
 
 def pdf_to_pngs(pdf_path, dpi=300):
     file_name_without_ext, _ = os.path.splitext(os.path.basename(pdf_path))
-    png_name = file_name_without_ext + ".png"
     images = [];
     doc = fitz.open(pdf_path)
     for page_num in range(len(doc)):
@@ -58,7 +57,7 @@ def new_blank():
     # 设置字体和大小
     font_size = 80
     #try:
-    font = ImageFont.truetype("/mnt/c/Windows/Fonts/seguisym.ttf", font_size)  # 使用系统自带的Arial字体
+    font = ImageFont.truetype("seguisym.ttf", font_size)  
     #except IOError:
     #    # 如果Arial字体不可用，使用默认字体
     #    font = ImageFont.load_default()
